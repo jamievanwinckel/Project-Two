@@ -11,8 +11,8 @@ function getResults() {
   numberOfCorrectAnswers += finalResult(pageThreeValue);
   document.getElementById("pageThreeResultDiv").innerHTML = translateResult(pageThreeValue);
   var finalAnswer = numberOfCorrectAnswers / 3;
-  document.getElementById("finalScore").innerHTML = finalAnswer.toPrecision(3);
-  
+  document.getElementById("finalScore").innerHTML = (finalAnswer.toPrecision(3) + "%");
+
 }
 function finalResult(result) {
   if ( result == "true" ) {
