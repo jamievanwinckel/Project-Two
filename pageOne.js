@@ -1,6 +1,4 @@
 //Created by Jamie Van Winckel
-//MAKE NEW FUNCTION FOR PAGE TWO THAT TAKES THE NUMBERS (THAT WERE JUST CHANGED FROM LETTERS) SO THAT IT CHANGES FROM STRINGS TO NUMBERS
-//parseInt <-converts strings to integers
 function sampleAnswers() {
   var e1n1Value = document.getElementById("e1n1").innerHTML;
   var e1n2Value = document.getElementById("e1n2").innerHTML;
