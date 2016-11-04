@@ -1,179 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--Created by Jamie Van Winckel-->
     <meta charset="UTF-8">
     <title>Intelligence Test</title>
-    <style>
-      .headingStyle {
-        color: DarkSlateBlue
-        font-family: "Ariel Verdana", san serif
-      }
-      #mystyle{
-        color: red
-      }
-      body {
-        background-color: IndianRed;
-      }
-      .oneLine {
-        display: inline-block;
-      }
-    </style>
-    <script>
-    function letterToNumber(letterIn) {
-      var letter = letterIn.toUpperCase();
-      var numberOut;
-      switch (letter) {
-        case "A":
-          numberOut = "1";
-          break;
-        case "B":
-          numberOut = "2";
-          break;
-        case "C":
-          numberOut = "3";
-          break;
-        case "D":
-          numberOut = "4";
-          break;
-        case "E":
-          numberOut = "5";
-          break;
-        case "F":
-          numberOut = "6";
-          break;
-        case "G":
-          numberOut = "7";
-          break;
-        case "H":
-          numberOut = "8";
-          break;
-        case "I":
-          numberOut = "9";
-          break;
-        case "J":
-          numberOut = "10";
-          break;
-        case "K":
-          numberOut = "11";
-          break;
-        case "L":
-          numberOut = "12";
-          break;
-        case "M":
-          numberOut = "13";
-          break;
-        case "N":
-          numberOut = "14";
-          break;
-        case "O":
-          numberOut = "15";
-          break;
-        case "P":
-          numberOut = "16";
-          break;
-        case "Q":
-          numberOut = "17";
-          break;
-        case "R":
-          numberOut = "18";
-          break;
-        case "S":
-          numberOut = "19";
-          break;
-        case "T":
-          numberOut = "20";
-          break;
-        case "U":
-          numberOut = "21";
-          break;
-        case "V":
-          numberOut = "22";
-          break;
-        case "W":
-          numberOut = "23";
-          break;
-        case "X":
-          numberOut = "24";
-          break;
-        case "Y":
-          numberOut = "25";
-          break;
-        case "Z":
-          numberOut = "26";
-          break;
-        default:
-          numberOut = "";
-          break;
-      }
-      return numberOut;
-    }
-    function lettersToNumbers(lettersIn) {
-      var letter1 = lettersIn.substr(0,1);
-      var letter2 = lettersIn.substr(1,1);
-      var letter3 = lettersIn.substr(2,1);
-      var number1 = letterToNumber(letter1);
-      var number2 = letterToNumber(letter2);
-      var number3 = letterToNumber(letter3);
-      var numberAll = number1 + number2 + number3;
-      return numberAll;
-    }
-    function pink() {
-      var e1n1Value = document.getElementById("e1n1").innerHTML;
-      var e1n2Value = document.getElementById("e1n2").innerHTML;
-      var e1n3Value = lettersToNumbers(e1n1Value) + lettersToNumbers(e1n2Value);
-      document.getElementById("e1n3").innerHTML = e1n3Value;
-      var e2n1Value = document.getElementById("e2n1").innerHTML;
-      var e2n2Value = document.getElementById("e2n2").innerHTML;
-      var e2n3Value = lettersToNumbers(e2n1Value) + lettersToNumbers(e2n2Value);
-      document.getElementById("e2n3").innerHTML = e2n3Value;
-      var e3n1Value = document.getElementById("e3n1").innerHTML;
-      var e3n2Value = document.getElementById("e3n2").innerHTML;
-      var e3n3Value = lettersToNumbers(e3n1Value) + lettersToNumbers(e3n2Value);
-      document.getElementById("e3n3").innerHTML = e3n3Value;
-      var e4n1Value = document.getElementById("e4n1").innerHTML;
-      var e4n2Value = document.getElementById("e4n2").innerHTML;
-      var e4n3Value = lettersToNumbers(e4n1Value) + lettersToNumbers(e4n2Value);
-      document.getElementById("e4n3").innerHTML = e4n3Value;
-      var e5n1Value = document.getElementById("e5n1").innerHTML;
-      var e5n2Value = document.getElementById("e5n2").innerHTML;
-      var e5n3Value = lettersToNumbers(e5n1Value) + lettersToNumbers(e5n2Value);
-      document.getElementById("e5n3").innerHTML = e5n3Value;
-      var e6n1Value = document.getElementById("e6n1").innerHTML;
-      var e6n2Value = document.getElementById("e6n2").innerHTML;
-      var e6n3Value = lettersToNumbers(e6n1Value) + lettersToNumbers(e6n2Value);
-      document.getElementById("e6n3").innerHTML = e6n3Value;
-      document.getElementById("correctAnswer").innerHTML = correctAnswer;
-    }
-    function checkAnswer() {
-      //get the correct answer
-      var e6n1Value = document.getElementById("e6n1").innerHTML;
-      var e6n2Value = document.getElementById("e6n2").innerHTML;
-      var finalAnswer = lettersToNumbers(e6n1Value) + lettersToNumbers(e6n2Value);
-      //get their answer
-      var theirAnswer = document.getElementById("e6n3").value;
-      //compare answers
-      if ( finalAnswer == theirAnswer ) {
-        document.getElementById("userMessage").innerHTML = "Correct";
-      }
-      else {
-        document.getElementById("userMessage").innerHTML = "Incorrect";
-      }
-      //if good, set answer "correct" to display
-      //else, set answer as "incorrect"
-    }
-      </script>
+    <style src="style.css"></style>
+    <link rel="stylesheet" href="style.css">
+      <script type="text/javascript" src="projectTwo.js"></script>
+      <script type="text/javascript" src="cookieHelper.js"></script>
+      <script type="text/javascript" src="pageOne.js"></script>
   </head>
-    <body onload = "pink()">
-      <h1 class="headingStyle">Intelligence Test</h1>
+    <body onload="sampleAnswers();">
+      <font face="Ariel Verdana" size="6" color="DarkSlateBlue">
+      <div class="allignCenter">
+      <h1>Intelligence Test</h1>
       <div class="oneLine" id="e1n1">AXL</div> + <div class="oneLine" id="e1n2">MEF</div> = <div class="oneLine" id="e1n3"></div><br>
       <div class="oneLine" id="e2n1">AAA</div> + <div class="oneLine" id="e2n2">FPL</div> = <div class="oneLine" id="e2n3"></div><br>
       <div class="oneLine" id="e3n1">BHJ</div> + <div class="oneLine" id="e3n2">XHN</div> = <div class="oneLine" id="e3n3"></div><br>
       <div class="oneLine" id="e4n1">KLB</div> + <div class="oneLine" id="e4n2">ZDK</div> = <div class="oneLine" id="e4n3"></div><br>
       <div class="oneLine" id="e5n1">YBN</div> + <div class="oneLine" id="e5n2">SWE</div> = <div class="oneLine" id="e5n3"></div><br>
-      <form>
+    <form>
         <div class="oneLine" id="e6n1">ABF</div> + <div class="oneLine" id="e6n2">DEC</div> =
         <div class="oneLine"><input onchange="checkAnswer()" type="text" id="e6n3" value="" size="" maxlength="7"/></div>
-      </form>
-      <div id="userMessage"></div>
+    </form>
+
+      <div class="colortext" id="userMessage"></div><br><br>
+
+      <a href="pageTwo.html">Next Test</a>
+      </div>
+  </font>
     </body>
 </html>

@@ -1,0 +1,56 @@
+<!--Created by Jamie Van Winckel-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Intelligence Test</title>
+    <style src="style.css"></style>
+    <link rel="stylesheet" href="style.css">
+      <!--TAKE OUT JAVASCRIPT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <script>
+      function getResults() {
+        var numberOfCorrectAnswers = 0;
+        var pageOneValue = getCookie(pageOneResult);
+        numberOfCorrectAnswers += finalResult(pageOneValue);
+        document.getElementById("pageOneResultDiv").innerHTML = translateResult(pageOneValue);
+        var pageTwoValue = getCookie(pageTwoResult);
+        numberOfCorrectAnswers += finalResult(pageTwoValue);
+        document.getElementById("pageTwoResultDiv").innerHTML = translateResult(pageTwoValue);
+        var pageThreeValue = getCookie(pageThreeResult);
+        numberOfCorrectAnswers += finalResult(pageThreeValue);
+        document.getElementById("pageThreeResultDiv").innerHTML = translateResult(pageThreeValue);
+        var finalAnswer = numberOfCorrectAnswers / 3;
+        document.getElementById("finalScore").innerHTML = finalAnswer;
+      }
+      function finalResult(result) {
+        if ( result == "true" ) {
+          return 1;
+        }
+        else {
+          return 0;
+        }
+      }
+      function translateResult(result) {
+        if ( result == "true" ) {
+          return "Correct";
+        }
+        else {
+          return "Incorrect";
+        }
+      }
+    </script>
+      <script type="text/javascript" src="projectTwo.js"></script>
+      <script type="text/javascript" src="cookieHelper.js"></script>
+  </head>
+
+    <body onload="getResults();">
+      <font face="Ariel Verdana" size="6" color="DarkSlateBlue">
+      <div class="allignCenter">
+      <h1>Your Results</h1>
+      <div class="oneLine">Page One</div> = <div class="oneLine" id="pageOneResultDiv"></div><br><br>
+      <div class="oneLine">Page Two</div> = <div class="oneLine" id="pageTwoResultDiv"></div><br><br>
+      <div class="oneLine">Page Three</div> = <div class="oneLine" id="pageThreeResultDiv"></div><br><br><br><br>
+      <div class="oneLine">Final Score</div> = <div class="oneLine" id="finalScore"></div><br>
+  </font>
+    </body>
+</html>

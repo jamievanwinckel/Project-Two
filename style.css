@@ -1,0 +1,17 @@
+/*Created by Jamie Van Winckel*/
+body {
+  background-color: IndianRed;
+  font-family: "Ariel Verdana", san serif;
+
+}
+.oneLine {
+  display: inline-block;
+}
+.allignCenter {
+  margin: auto;
+  display: block;
+  width: 50%;
+}
+.colortext {
+  color: yellow;
+}
