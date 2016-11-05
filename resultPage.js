@@ -10,7 +10,7 @@ function getResults() {
   var pageThreeValue = getCookie(pageThreeResult);
   numberOfCorrectAnswers += finalResult(pageThreeValue);
   document.getElementById("pageThreeResultDiv").innerHTML = translateResult(pageThreeValue);
-  var finalAnswer = numberOfCorrectAnswers / 3;
+  var finalAnswer = (numberOfCorrectAnswers / 3) * 100;
   document.getElementById("finalScore").innerHTML = (finalAnswer.toPrecision(3) + "%");
 
 }

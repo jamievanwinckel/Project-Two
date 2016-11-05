@@ -6,11 +6,15 @@ body {
 .oneLine {
   display: inline-block;
 }
-.allignCenter {
+
+.colortext {
+  color: yellow;
+}
+.bodySetup {
+  font-family: Ariel, Verdana;
+  font-size: x-large;
+  color: DarkSlateBlue;
   margin: auto;
   display: block;
   width: 50%;
-}
-.colortext {
-  color: yellow;
 }

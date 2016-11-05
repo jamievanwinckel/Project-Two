@@ -4,15 +4,13 @@
     <!--Created by Jamie Van Winckel-->
     <meta charset="UTF-8">
     <title>Intelligence Test</title>
-    <style src="style.css"></style>
     <link rel="stylesheet" href="style.css">
       <script type="text/javascript" src="projectTwo.js"></script>
       <script type="text/javascript" src="cookieHelper.js"></script>
       <script type="text/javascript" src="pageTwo.js"></script>
   </head>
   <body onload="sampleAnswers();">
-      <font face="Ariel Verdana" size="6" color="DarkSlateBlue">
-      <div class="allignCenter">
+      <div class="bodySetup">
       <h1>Intelligence Test</h1>
       <p>Solve the equation.</p>
       <div class="oneLine" id="e1n1">HJK</div> - <div class="oneLine" id="e1n2">BZC</div> = <div class="oneLine" id="e1n3"></div><br>
@@ -22,13 +20,12 @@
       <div class="oneLine" id="e5n1">POA</div> - <div class="oneLine" id="e5n2">EYU</div> = <div class="oneLine" id="e5n3"></div><br>
     <form>
       <div class="oneLine" id="e6n1">EIA</div> - <div class="oneLine" id="e6n2">CAN</div> =
-      <div class="oneLine"><input onchange="checkAnswer()" type="text" id="e6n3" value="" size="" maxlength="7"/></div>
+      <div class="oneLine"><input onchange="checkAnswer()" type="text" id="e6n3" value="" size="7" maxlength="7"/></div>
     </form>
 
       <div class="colortext" id="userMessage"></div><br><br>
 
       <a href="pageThree.html">Next Test</a>
       </div>
-      </font>
   </body>
 </html>
